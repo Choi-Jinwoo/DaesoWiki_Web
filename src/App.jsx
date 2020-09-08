@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import StartPage from './pages/StartPage/StartPage';
+import MainPage from './pages/MainPage/MainPage';
 
 import './common.scss';
 
@@ -9,7 +9,8 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/start" component={StartPage} />
-      <Redirect path="*" to="/" />
+      <Route path="/" component={MainPage} />
+      {/* <Redirect path="*" to="/" /> */}
     </Switch>
   </BrowserRouter>
 )
